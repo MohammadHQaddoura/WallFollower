@@ -138,11 +138,11 @@ def listener():
             dInitial = float(readRange)    # Assigning the initial value to the
                                     # immediate reading the LIDAR records
 
-            rospy.sleep(.01)        # delaying for half a second
+            rospy.sleep(.01)        # delaying for a 100th of a second, in other words setting frequency to 100 Hz
 
             dFinal = float(readRange)      # Assigning the final value to the
-                                    # value the LIDAR reads after half a second,
-                                    # setting our PD interval to half a second
+                                    # value the LIDAR reads after a 100th of a second,
+                                    # setting our PD interval to a 100th of a second
 
         if readAngle != "inf":
             # This if statement works the same as the previous one
